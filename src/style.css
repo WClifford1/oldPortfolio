@@ -1,0 +1,214 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes test {
+  0% {
+    border-left: 0px solid #555555;
+    border-radius: 80px;
+    opacity: 1;
+  }
+  50% {
+    border-left: 30px solid #555555;
+    border-radius: 80px;
+    -webkit-transform: rotateY(60deg);
+            transform: rotateY(60deg);
+    margin-left: 0;
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
+@keyframes test {
+  0% {
+    border-left: 0px solid #555555;
+    border-radius: 80px;
+    opacity: 1;
+  }
+  50% {
+    border-left: 30px solid #555555;
+    border-radius: 80px;
+    -webkit-transform: rotateY(60deg);
+            transform: rotateY(60deg);
+    margin-left: 0;
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
+@-webkit-keyframes testreverse {
+  0% {
+    display: none;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    margin-left: 0;
+    opacity: 0;
+  }
+  100% {
+    display: absolute;
+    -webkit-transform: rotateY(-60deg);
+            transform: rotateY(-60deg);
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes testreverse {
+  0% {
+    display: none;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    margin-left: 0;
+    opacity: 0;
+  }
+  100% {
+    display: absolute;
+    -webkit-transform: rotateY(-60deg);
+            transform: rotateY(-60deg);
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: lightblue;
+  background-size: cover;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+  margin: auto;
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
+  padding: 1px 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(lightblue), to(green));
+  background-image: linear-gradient(to top, lightblue, green);
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+}
+
+#grid {
+  display: -ms-grid;
+  display: grid;
+  height: 420px;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  margin-top: 125px;
+  margin-left: 200px;
+  border-radius: 80px;
+  width: 60%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  grid-column-gap: 40px;
+  grid-row-gap: 25px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b0b0b0), to(black));
+  background-image: linear-gradient(#b0b0b0, black);
+  padding: 60px;
+  padding-right: 100px;
+  border-left: 30px solid #555555;
+  border-radius: 80px;
+  -webkit-transform: rotateY(60deg);
+          transform: rotateY(60deg);
+  margin-left: 0;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  height: 75px;
+  color: #11a511;
+  border-radius: 24px;
+  border: 3px dodgerblue solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Audiowide', serif;
+  letter-spacing: 6px;
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+
+article {
+  position: absolute;
+  text-align: center;
+  border: 10px solid black;
+  left: 200%;
+  font-size: 32px;
+  background-color: lightsalmon;
+  height: 100%;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  opacity: 0;
+}
+
+#grid:target #contact {
+  -webkit-animation: testreverse 1s forwards;
+          animation: testreverse 1s forwards;
+}
+
+#aboutme:target #about {
+  -webkit-animation: testreverse 1s forwards;
+          animation: testreverse 1s forwards;
+}
+
+#home:target #stacks {
+  -webkit-animation: testreverse 1s forwards;
+          animation: testreverse 1s forwards;
+}
+
+#container:target #portf {
+  -webkit-animation: testreverse 1s forwards;
+          animation: testreverse 1s forwards;
+}
+
+.a {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  letter-spacing: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:unvisited {
+  color: #11a511;
+}
+
+a:visited {
+  color: #11a511;
+}
+/*# sourceMappingURL=style.css.map */
