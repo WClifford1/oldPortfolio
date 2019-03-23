@@ -1,223 +1,154 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
-@keyframes test {
-    0% {
-        border-left: 0px solid rgb(85, 85, 85);
-        border-radius: 80px;
-        opacity: 1;
-    }
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
 
-    50% {
-        border-left: 30px solid rgb(85, 85, 85);
-        border-radius: 80px;
-        transform: rotateY(60deg);
-        margin-left: 0;
-        visibility: hidden;
-    }
-
-    100% {
-        visibility: hidden;
-        transform: translateX(200px);
-    }
-
+  100% {
+    opacity: 1;
+  }
 }
 
 
-@keyframes testreverse {
 
-    0% {
-        display: none;
-        transform: rotateY(0deg);
-        margin-left: 0;
-        opacity: 0;
-    }
-
-
-    100% {
-        display: absolute;
-        transform: rotateY(-60deg);
-        margin-left: 0;
-        opacity: 1;
-    }
-}
-
-
+html,
 body {
-    background-color: lightblue;
-    background-size: cover;
+  background: radial-gradient(farthest-corner at 30vw 20vh, rgb(80, 151, 167) 1%, rgb(70, 39, 44) 100%);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
-nav {
-    display: flex;
-    background-size: cover;
-    width: 100%;
-    height: 650px;
-    margin: auto;
-    perspective: 1200px;
-    padding: 1px 10px;
-    background-image: linear-gradient(to top, lightblue, green);
+
+ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
+
+li {
+  float: left;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #111;
+}
+
+
+#title {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: red;
+  font-size: 4vh;
+  text-shadow:
+    4px 4px 0px #010691,
+    7px 7px 0px rgb(225, 2, 2),
+    11px 11px 0px #0106917c,
+    14px 14px 14px rgba(225, 2, 2, 0.256),
+}
 
 #container {
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    width: 100%;
-    background-color: transparent;
+  margin: auto;
+  margin-top: 5%;
+  width: 50%;
+  height: 400px;
 }
 
 
-#grid {
-    display: grid;
-    height: 420px;
-    transform: scale(1.25);
-    margin-top: 125px;
-    margin-left: 200px;
-    border-radius: 80px;
-    width: 60%;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 40px;
-    grid-row-gap: 25px;
-    transform-style: preserve-3d;
-    background-image: linear-gradient(rgb(176, 176, 176), black);
-    padding: 60px;
-    padding-right: 100px;
-    border-left: 30px solid rgb(85, 85, 85);
-    border-radius: 80px;
-    transform: rotateY(60deg);
-    margin-left: 0;
+#aboutme,
+#portfolio,
+#stacks,
+#contact {
+  text-align: center;
+  display: none;
+  font-size: 1.5em;
 }
 
 
-.box {
-    display: flex;
-    background-color: rgb(0, 0, 0);
-    height: 75px;
-    color: rgb(17, 165, 17);
-    border-radius: 24px;
-    border: 3px dodgerblue solid;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Audiowide', serif;
-    letter-spacing: 6px;
-    font-size: 2.5vw;
-    font-weight: bold;
+#aboutme:target,
+#portfolio:target,
+#stacks:target,
+#contact:target {
+  display: block;
+  animation: appear 1.5s forwards;
 }
 
 
-article {
-    position: absolute;
-    text-align: center;
-    border: 10px solid black;
-    left: 200%;
-    font-size: 32px;
-    background-color: lightsalmon;
-    height: 100%;
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    opacity: 0;
+a:link {
+  color: white;
 }
 
-
-#grid:target #contact {
-    animation: testreverse 1s forwards;
-}
-
-
-#aboutme:target #about {
-    animation: testreverse 1s forwards;
-}
-
-
-#home:target #stacks {
-    animation: testreverse 1s forwards;
-}
-
-
-#container:target #portf {
-    animation: testreverse 1s forwards;
-}
-
-
-.a {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    letter-spacing: 10px;
-}
-
-
-a {
-    text-decoration: none;
-}
-
-
-a:unvisited {
-    color: rgb(17, 165, 17);
-
-}
-
-
+/* visited link */
 a:visited {
-    color: rgb(17, 165, 17);
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
 }
 
 
-// #back {
-//     display: flex;
-//     background-color: blue;
-//     width: 100%;
-//     height: 600px;
-//     margin: auto;
-//     perspective: 1200px;
-//     padding: 1px 10px;
-//     z-index: 2;
-// }
+form {
+  margin-top: 50px;
+  transition: all 4s ease-in-out;
+}
 
+.form-control {
+  width: 600px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
 
-// #grid2 {
-//     display: grid;
-//     position: block;
-//     height: 420px;
-//     transform: scale(1.25);
-//     margin-top: 100px;
-//     margin-left: 200px;
-//     border-radius: 80px;
-//     width: 60%;
-//     grid-template-columns: 50% 50%;
-//     grid-column-gap: 40px;
-//     grid-row-gap: 25px;
-//     transform-style: preserve-3d;
-//     background-color: red;
-//     padding: 60px;
-//     padding-right: 100px;
-//     z-index: 10;
-//     opacity: 0;
-// }
+input {
+  height: 45px;
+}
 
+form .submit {
+  background: red;
+  border-color: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+}
 
-// .box2 {
-//     display: flex;
-//     background-color: rgb(0, 0, 0);
-//     height: 75px;
-//     color: rgb(17, 165, 17);
-//     border-radius: 24px;
-//     border: 3px dodgerblue solid;
-//     justify-content: center;
-//     align-items: center;
-//     font-family: 'Audiowide', cursive;
-//     letter-spacing: 6px;
-//     font-size: 2.5vw;
-//     font-weight: bold;
-// }
-
-
-// #grid2:target {
-//     opacity: 1;
-//     animation: test 4s forwards;
-// }
+form .submit:hover {
+  background-color: purple;
+  color: yellow;
+}
