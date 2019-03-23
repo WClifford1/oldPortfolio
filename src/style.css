@@ -1,36 +1,50 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html,
 body {
   height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
-  background-repeat: no-repeat;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.pimg1 {
+  background-image: url(./IMG_0630.JPG);
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url(./IMG_1376.JPG);
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url(./IMG_7138.JPG);
+  min-height: 400px;
+}
+
+.pimg4 {
+  background-image: url(./IMG_0949.JPG);
+  min-height: 400px;
+}
+
+.pimg1,
+.pimg2,
+.pimg3,
+.pimg4 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
   background-size: cover;
-  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
   text-align: center;
-}
-
-.content {
-  margin-top: 60px;
-  overflow: auto;
-}
-
-.content h1 {
-  font-size: 8vh;
-  text-shadow: 4px 4px 0px #010691, 7px 7px 0px #5c3030, 11px 11px 0px #0106917c, 14px 14px 14px rgba(225, 2, 2, 0.256);
-}
-
-.content #aboutme,
-.content #portfolio,
-.content #stacks,
-.content #contact {
-  text-align: center;
-  display: block;
-  font-size: 3vh;
+  color: black;
+  font-size: 27px;
+  letter-spacing: 8px;
 }
 
 .container nav.desk,
@@ -67,14 +81,19 @@ body {
   }
   .mob ul {
     margin-top: 40px;
-    background: #364a4b;
+    background: #393d3e;
     display: none;
+    list-style: none;
+    text-decoration: none;
+    color: white;
   }
   .mob li {
     text-align: center;
     padding: 20px;
     text-transform: uppercase;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
   }
   .mob ul.active {
     display: block;
@@ -82,6 +101,12 @@ body {
 }
 
 @media screen and (min-width: 700px) {
+  .pimg1,
+  .pimg2,
+  .pimg3,
+  .pimg4 {
+    background-attachment: scroll;
+  }
   nav.desk ul {
     list-style: none;
     width: 60%;
@@ -99,11 +124,7 @@ body {
             transform-style: preserve-3d;
   }
   nav ul li:hover {
-    background: transparent;
-    -webkit-transform: rotateY(60deg);
-            transform: rotateY(60deg);
-    -webkit-transform: rotateX(60deg);
-            transform: rotateX(60deg);
+    background-color: #996868;
   }
   a {
     color: #fff;
