@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".button .fa-caret-square-up").hide();
+
+            $(".button .fa-caret-square-down").click(function () {
+                $(this).hide();
+                $(".button .fa-caret-square-up").show();
+                $(".mob ul").addClass("active");
+            });
+
+            $(".button .fa-caret-square-up").click(function () {
+                $(this).hide();
+                $(".button .fa-caret-square-down").show();
+                $(".mob ul").removeClass("active");
+            });
+        });
+    </script>
+</head>
+
+
+
+<body>
+
+    <!-- This is the first image -->
+    <div class="pimg1">
+        <div class="ptext">
+            <span class="border">
+                WILLIAM CLIFFORD
+            </span>
+        </div>
+    </div>
+
+<!-- This is the about me section -->
+    <section class="section">
+        <h2 id="aboutme">About Me</h2>
+        <p>Hi, my name is William Clifford. I am an aspiring Software Developer. I am currently studying the coding
+            bootcamp at Coderacademy in Brisbane. Upon completion of the course I will have a good understanding of
+            software and web development and aim to work as a Junior Developer.</p>
+    </section>
+
+<!-- This is the second image -->
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="border">
+                Portfolio
+            </span>
+        </div>
+    </div>
+
+<!-- This is the portfolio section -->
+    <section class="section">
+        <h2 id="portfolio">Portfolio</h2>
+        <p>Coffee App: A Ruby terminal app that I developed for my first assessment at the Coderacademy bootcamp. The
+            app is a relatively simple program which has CRUD functionality.</p>
+
+        <img class="coffee" src="./img/coffeeApp.png" alt="Coffee App" />
+        <img class="coffee" src="./img/coffeeApp2.png" alt="Coffee App" />
+
+    </section>
+
+<!-- This is the third image -->
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border">
+                Languages
+            </span>
+        </div>
+    </div>
+
+<!-- This is the languages section -->
+    <section class="section">
+        <h2 id="languages">Languages</h2>
+        <p>So far I have been learning Ruby, HTML and CSS. By the end of the coding bootcamp I will have learned Ruby on
+            Rails and Javascript MERN stack.</p>
+    </section>
+
+<!-- This is the fourth image -->
+    <div class="pimg4">
+        <div class="ptext">
+            <span class="border">
+                Contact
+            </span>
+        </div>
+    </div>
+
+<!-- This is the contact section, it contains the enquiry form -->
+    <section class="section">
+        <h2 id="contact">Contact</h2>
+        <div class="contactlinks">
+            <p><i class="fab fa-linkedin"></i><a href="http://www.linkedin.com/in/williamdavidclifford">
+                    http://www.linkedin.com/in/williamdavidclifford</a>
+            </p>
+            <p><i class="fab fa-github-square"></i><a href="https://github.com/WClifford1">
+                    https://github.com/WClifford1</a></p>
+            <p><i class="fas fa-envelope"></i><a href="mailto:williamdavidclifford@gmail.com">
+                    williamdavidclifford@gmail.com</a></p>
+        </div>
+        <div class="content"></div>
+        <div class="contact-form">
+            <form id="contact-form" method="post" action="./contact-form-handler.php">
+                <input name="name" type="text" class="form-control" placeholder="Name" required><br>
+
+                <input name="email" type="email" class="form-control" placeholder="Email" required><br>
+
+                <textarea name="message" class="form-control" placeholder="Enquiry" rows="4" required></textarea><br>
+
+                <input type="submit" class="form-control submit" value="SEND ENQUIRY">
+            </form>
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- This is the navbar for the desktop -->
+    <div class="container">
+        <nav class="desk">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- These are the toggle buttons for the phone navigation menu -->
+        <nav class="mob">
+            <div class="button">
+                <i class="fas fa-caret-square-down"></i>
+                <i class="fas fa-caret-square-up"></i>
+            </div>
+
+            <!-- This is the navbar for the mobile -->
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>
