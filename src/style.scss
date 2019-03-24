@@ -4,43 +4,46 @@ body {
   height: 100%;
   margin: 0;
   text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 // These are the images with their respective URLs and sizes, the first image is large the rest are small
 .pimg1 {
-  background-image:url(./IMG_6234.jpeg);
+  background-image: url(./img/IMG_1.jpeg);
   min-height: 100%;
 }
 
 .pimg2 {
-  background-image:url(./IMG_8752.JPG);
+  background-image: url(./img/IMG_2.jpeg);
   min-height: 500px;
 }
 
 .pimg3 {
-  background-image:url(./IMG_7139.jpeg);
+  background-image: url(./img/IMG_3.jpeg);
   min-height: 500px;
 }
 
 .pimg4 {
-  background-image:url(./IMG_0630.JPG);
+  background-image: url(./img/IMG_4.jpeg);
   min-height: 500px;
 }
 
 
-// These are the images
+// These are the background image properties and sets parallax
 .pimg1,
 .pimg2,
 .pimg3,
 .pimg4 {
-    position: relative;
-    opacity: .8;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+  position: relative;
+  opacity: .9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 
@@ -54,82 +57,113 @@ body {
   font-size: 4vw;
   letter-spacing: 16px;
   opacity: 1;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-@keyframes in{
-  0%{
-    letter-spacing: 12px;
-  }
 
-  100%{
-    letter-spacing: 6px;
-  }
-}
-
-// This is the sections of content
+// This is the content between the background images
 .section {
-  background-color: #393d3e;;
+  background-color: #393d3e;
   color: white;
   padding: 10px 80px;
   letter-spacing: 2px;
+  font-weight: 100;
 
-h2 {
-  letter-spacing: 12px;
+  h2 {
+    letter-spacing: 10px;
+    font-weight: 100;
+  }
 }
 
+
+@keyframes in {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+
+// This is for the images of CoffeeApp in the portfolio section
 .coffee {
   display: inline-block;
-  height: 200px;
-  width: 20%;
-  margin: auto 50px;
-  border: 5px solid black;
+  height: 25vh;
+  width: 25vw;
+  margin: auto 20px;
+  opacity: 0.6;
+  transform: all 1s ease-in-out;
+}
+
+.coffee:hover {
+  animation: in 1s forwards;
 }
 
 
+// This is for the contact links in the contact section
+.contactlinks p {
+  display: inline-block;
+  width: 50%;
+  padding: 20px;
+  font-size: 1.2vw;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  border-radius: 40px;
+}
 
-
-
+.contactlinks p:hover {
+  background-color: rgb(153, 104, 104);
+}
 
 
 // This is the container for both of the nav bars
 .container nav.desk,
-.container nav.mob{
+.container nav.mob {
   position: fixed;
   top: 0;
-	left: 0;
+  left: 0;
   width: 100%;
   background: black;
-	height: 60px;
+  height: 60px;
   perspective: 1000px;
   z-index: 10;
 }
 
 
+// Properties of links in both desktop and mobile navbars
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
-// This is specific settings for mobile devices, changes the nav bar and disables the parallax
+
+
+
+
+// This is specific settings for mobile devices which changes the nav bar and disables the parallax
 @media screen and (max-width: 700px) {
-  
-  // This removes the desktop nav bar
+
+
+  // Disables the desktop nav bar
   nav.desk {
     display: none;
   }
- 
 
-  // This makes the mobile nav bar appear
+
+  // Enables the mobile nav bar
   nav.mob,
   .button {
     display: block;
-	}
-	
-  
+  }
+
+
   // This is for the toggle button
   .button {
     position: relative;
-	}
-	
- 
+  }
+
+
   .button .fa-caret-square-down,
   .button .fa-caret-square-up {
     position: fixed;
@@ -138,10 +172,10 @@ h2 {
     font-size: 35px;
     color: #fff;
     cursor: pointer;
-	}
-	
- 
-  // This is the mobile nav bar
+  }
+
+
+  // Mobile nav bar properties
   .mob ul {
     margin-top: 40px;
     background: #393d3e;
@@ -149,115 +183,115 @@ h2 {
     list-style: none;
     text-decoration: none;
     color: white;
-  }
- 
 
-  .mob li {
-    text-align: center;
-    padding: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
+
+    li {
+      text-align: center;
+      padding: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+    }
   }
 
+
+  // This makes the mobile menu appear when the toggle button is pressed
   .mob ul.active {
     display: block;
   }
-	 
 }
+
+
 
 
 // This is for desktop and tablet devices
 @media screen and (min-width: 700px) {
 
 
-// This sets the background to a parallax
-.pimg1,
-.pimg2,
-.pimg3,
-.pimg4 {
-  background-attachment: fixed;
-}
-
-
-// This is the desktop navbar
-nav.desk ul {
-  list-style: none;
-  width: 60%;
-	height: 60px;
-	margin: 0 auto;
-	text-align: center;
-}
- 
-
-nav.desk ul li {
-  width: 20%;
-  float: left;
-  line-height: 60px;
-	transition: all 0.3s ease;
-  transform-style: preserve-3d;
-}
- 
-
-nav ul li:hover {
-  background-color: rgb(153, 104, 104);
-}
- 
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
- 
-
-// This makes the mobile nav bar disappear
-.mob,
-.button {
-  display: none;
-}
-
-
-
-// This is for the contact form
-form {
-  margin-top: 50px;
-
-  .submit {
-    text-align: center;
+  // Disables the mobile navbar
+  .mob,
+  .button {
+    display: none;
   }
-}
 
-.form-control {
-  width: 600px;
-  background: transparent;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid gray;
-  color: black;
-  font-size: 18px;
-  margin-bottom: 16px;
-}
 
-input {
-  height: 45px;
-}
+  // This sets the background to a parallax
+  .pimg1,
+  .pimg2,
+  .pimg3,
+  .pimg4 {
+    background-attachment: fixed;
+  }
 
-form .submit {
-  background-color: black;
-  border-radius: 40px;
-  border-color: transparent;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  height: 50px;
-  margin-top: 20px;
-}
 
-form .submit:hover {
-  background-color: rgb(153, 104, 104);
-  color: white;
-}
+  // Desktop navbar properties
+  nav.desk ul {
+    list-style: none;
+    width: 60%;
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+
+
+    li {
+      width: 20%;
+      float: left;
+      line-height: 60px;
+      transition: all 0.3s ease;
+      transform-style: preserve-3d;
+      border-radius: 40px;
+    }
+  }
+
+  nav ul li:hover {
+    background-color: rgb(153, 104, 104);
+  }
+
+
+
+
+  // This is for the contact form
+  form {
+    margin-top: 50px;
+
+    .submit {
+      text-align: center;
+    }
+  }
+
+  .form-control {
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(153, 104, 104);
+    color: rgb(153, 104, 104);
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  input {
+    height: 45px;
+  }
+
+  form .submit {
+    background-color: black;
+    border-radius: 40px;
+    border-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+  }
+
+  form .submit:hover {
+    background-color: rgb(153, 104, 104);
+    color: white;
+  }
 
 }

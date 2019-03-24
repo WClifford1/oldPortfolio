@@ -5,26 +5,30 @@ body {
   height: 100%;
   margin: 0;
   text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .pimg1 {
-  background-image: url(./IMG_6234.jpeg);
+  background-image: url(./img/IMG_1.jpeg);
   min-height: 100%;
 }
 
 .pimg2 {
-  background-image: url(./IMG_8752.JPG);
+  background-image: url(./img/IMG_2.jpeg);
   min-height: 500px;
 }
 
 .pimg3 {
-  background-image: url(./IMG_7139.jpeg);
+  background-image: url(./img/IMG_3.jpeg);
   min-height: 500px;
 }
 
 .pimg4 {
-  background-image: url(./IMG_0630.JPG);
+  background-image: url(./img/IMG_4.jpeg);
   min-height: 500px;
 }
 
@@ -33,7 +37,7 @@ body {
 .pimg3,
 .pimg4 {
   position: relative;
-  opacity: .8;
+  opacity: .9;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,24 +53,7 @@ body {
   font-size: 4vw;
   letter-spacing: 16px;
   opacity: 1;
-}
-
-@-webkit-keyframes in {
-  0% {
-    letter-spacing: 12px;
-  }
-  100% {
-    letter-spacing: 6px;
-  }
-}
-
-@keyframes in {
-  0% {
-    letter-spacing: 12px;
-  }
-  100% {
-    letter-spacing: 6px;
-  }
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .section {
@@ -74,18 +61,61 @@ body {
   color: white;
   padding: 10px 80px;
   letter-spacing: 2px;
+  font-weight: 100;
 }
 
 .section h2 {
-  letter-spacing: 12px;
+  letter-spacing: 10px;
+  font-weight: 100;
+}
+
+@-webkit-keyframes in {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes in {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .coffee {
   display: inline-block;
-  height: 200px;
-  width: 20%;
-  margin: auto 50px;
-  border: 5px solid black;
+  height: 25vh;
+  width: 25vw;
+  margin: auto 20px;
+  opacity: 0.6;
+  -webkit-transform: all 1s ease-in-out;
+          transform: all 1s ease-in-out;
+}
+
+.coffee:hover {
+  -webkit-animation: in 1s forwards;
+          animation: in 1s forwards;
+}
+
+.contactlinks p {
+  display: inline-block;
+  width: 50%;
+  padding: 20px;
+  font-size: 1.2vw;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 40px;
+}
+
+.contactlinks p:hover {
+  background-color: #996868;
 }
 
 .container nav.desk,
@@ -99,6 +129,11 @@ body {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   z-index: 10;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 700px) {
@@ -129,7 +164,7 @@ body {
     text-decoration: none;
     color: white;
   }
-  .mob li {
+  .mob ul li {
     text-align: center;
     padding: 20px;
     text-transform: uppercase;
@@ -143,6 +178,10 @@ body {
 }
 
 @media screen and (min-width: 700px) {
+  .mob,
+  .button {
+    display: none;
+  }
   .pimg1,
   .pimg2,
   .pimg3,
@@ -164,17 +203,10 @@ body {
     transition: all 0.3s ease;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
+    border-radius: 40px;
   }
   nav ul li:hover {
     background-color: #996868;
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  .mob,
-  .button {
-    display: none;
   }
   form {
     margin-top: 50px;
@@ -187,8 +219,8 @@ body {
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 1px solid gray;
-    color: black;
+    border-bottom: 1px solid #996868;
+    color: #996868;
     font-size: 18px;
     margin-bottom: 16px;
   }
@@ -205,6 +237,10 @@ body {
     letter-spacing: 2px;
     height: 50px;
     margin-top: 20px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
   }
   form .submit:hover {
     background-color: #996868;
