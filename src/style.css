@@ -1,28 +1,31 @@
 html,
 body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100%;
   margin: 0;
+  text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .pimg1 {
-  background-image: url(./IMG_0630.JPG);
+  background-image: url(./IMG_6234.jpeg);
   min-height: 100%;
 }
 
 .pimg2 {
-  background-image: url(./IMG_1376.JPG);
-  min-height: 400px;
+  background-image: url(./IMG_8752.JPG);
+  min-height: 500px;
 }
 
 .pimg3 {
-  background-image: url(./IMG_7138.JPG);
-  min-height: 400px;
+  background-image: url(./IMG_7139.jpeg);
+  min-height: 500px;
 }
 
 .pimg4 {
-  background-image: url(./IMG_0949.JPG);
-  min-height: 400px;
+  background-image: url(./IMG_0630.JPG);
+  min-height: 500px;
 }
 
 .pimg1,
@@ -30,11 +33,11 @@ body {
 .pimg3,
 .pimg4 {
   position: relative;
-  opacity: 0.70;
+  opacity: .8;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .ptext {
@@ -43,8 +46,46 @@ body {
   width: 100%;
   text-align: center;
   color: black;
-  font-size: 27px;
-  letter-spacing: 8px;
+  font-size: 4vw;
+  letter-spacing: 16px;
+  opacity: 1;
+}
+
+@-webkit-keyframes in {
+  0% {
+    letter-spacing: 12px;
+  }
+  100% {
+    letter-spacing: 6px;
+  }
+}
+
+@keyframes in {
+  0% {
+    letter-spacing: 12px;
+  }
+  100% {
+    letter-spacing: 6px;
+  }
+}
+
+.section {
+  background-color: #393d3e;
+  color: white;
+  padding: 10px 80px;
+  letter-spacing: 2px;
+}
+
+.section h2 {
+  letter-spacing: 12px;
+}
+
+.coffee {
+  display: inline-block;
+  height: 200px;
+  width: 20%;
+  margin: auto 50px;
+  border: 5px solid black;
 }
 
 .container nav.desk,
@@ -53,10 +94,11 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #393d3e;
+  background: black;
   height: 60px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
+  z-index: 10;
 }
 
 @media screen and (max-width: 700px) {
@@ -105,7 +147,7 @@ body {
   .pimg2,
   .pimg3,
   .pimg4 {
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
   nav.desk ul {
     list-style: none;
@@ -136,8 +178,9 @@ body {
   }
   form {
     margin-top: 50px;
-    -webkit-transition: all 4s ease-in-out;
-    transition: all 4s ease-in-out;
+  }
+  form .submit {
+    text-align: center;
   }
   .form-control {
     width: 600px;
@@ -153,7 +196,8 @@ body {
     height: 45px;
   }
   form .submit {
-    background: red;
+    background-color: black;
+    border-radius: 40px;
     border-color: transparent;
     color: white;
     font-size: 20px;
@@ -163,8 +207,8 @@ body {
     margin-top: 20px;
   }
   form .submit:hover {
-    background-color: purple;
-    color: yellow;
+    background-color: #996868;
+    color: white;
   }
 }
 /*# sourceMappingURL=style.css.map */
