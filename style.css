@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .pimg1 {
   background-image: url(./img/IMG_1.jpeg);
   min-height: 100%;
