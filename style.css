@@ -102,6 +102,7 @@ h2::before {
 
 .coffee {
   display: inline-block;
+  padding-bottom: .5rem;
   height: 25vh;
   width: 25vw;
   margin: auto 20px;
