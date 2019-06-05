@@ -60,6 +60,10 @@ html {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
 
 // This is the content between the background images
 .section {
@@ -73,6 +77,15 @@ html {
     letter-spacing: 10px;
     font-weight: 100;
   }
+}
+
+h2::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -4rem; 
+  height: 4rem; 
+  visibility: hidden; 
+  pointer-events: none;
 }
 
 
@@ -125,7 +138,7 @@ html {
   left: 0;
   width: 100%;
   background: black;
-  height: 60px;
+  height: 4rem;
   perspective: 1000px;
   z-index: 10;
 }
@@ -229,7 +242,7 @@ a {
   nav.desk ul {
     list-style: none;
     width: 60%;
-    height: 60px;
+    height: 4rem;
     margin: 0 auto;
     text-align: center;
 
@@ -237,7 +250,7 @@ a {
     li {
       width: 20%;
       float: left;
-      line-height: 60px;
+      line-height: 4rem;
       transition: all 0.3s ease;
       transform-style: preserve-3d;
       border-radius: 40px;
