@@ -130,6 +130,15 @@ h2::before {
   background-color: rgb(153, 104, 104);
 }
 
+button:active { 
+  background-color: rgb(153, 104, 104);
+  border: none;
+}
+
+button:hover {
+  color: rgb(153, 104, 104);
+}
+
 
 // This is the container for both of the nav bars
 .container nav.desk,
