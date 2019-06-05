@@ -1,7 +1,7 @@
 html,
 body {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   height: 100%;
   margin: 0;
   text-align: center;
@@ -76,8 +76,8 @@ ul {
 h2::before {
   display: block;
   content: " ";
-  margin-top: -4rem;
-  height: 4rem;
+  margin-top: -4.5rem;
+  height: 4.5rem;
   visibility: hidden;
   pointer-events: none;
 }
@@ -86,7 +86,6 @@ h2::before {
   0% {
     opacity: 0.6;
   }
-
   100% {
     opacity: 1;
   }
@@ -96,7 +95,6 @@ h2::before {
   0% {
     opacity: 0.6;
   }
-
   100% {
     opacity: 1;
   }
@@ -109,12 +107,12 @@ h2::before {
   margin: auto 20px;
   opacity: 0.6;
   -webkit-transform: all 1s ease-in-out;
-  transform: all 1s ease-in-out;
+          transform: all 1s ease-in-out;
 }
 
 .coffee:hover {
   -webkit-animation: in 1s forwards;
-  animation: in 1s forwards;
+          animation: in 1s forwards;
 }
 
 .contactlinks p {
@@ -125,7 +123,7 @@ h2::before {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+          transform-style: preserve-3d;
   border-radius: 40px;
 }
 
@@ -142,7 +140,7 @@ h2::before {
   background: black;
   height: 4rem;
   -webkit-perspective: 1000px;
-  perspective: 1000px;
+          perspective: 1000px;
   z-index: 10;
 }
 
@@ -155,16 +153,13 @@ a {
   nav.desk {
     display: none;
   }
-
   nav.mob,
   .button {
     display: block;
   }
-
   .button {
     position: relative;
   }
-
   .button .fa-caret-square-down,
   .button .fa-caret-square-up {
     position: fixed;
@@ -174,7 +169,6 @@ a {
     color: #fff;
     cursor: pointer;
   }
-
   .mob ul {
     margin-top: 40px;
     background: #393d3e;
@@ -183,7 +177,6 @@ a {
     text-decoration: none;
     color: white;
   }
-
   .mob ul li {
     text-align: center;
     padding: 20px;
@@ -192,26 +185,22 @@ a {
     text-decoration: none;
     color: white;
   }
-
   .mob ul.active {
     display: block;
   }
 }
 
 @media screen and (min-width: 700px) {
-
   .mob,
   .button {
     display: none;
   }
-
   .pimg1,
   .pimg2,
   .pimg3,
   .pimg4 {
     background-attachment: fixed;
   }
-
   nav.desk ul {
     list-style: none;
     width: 60%;
@@ -219,7 +208,6 @@ a {
     margin: 0 auto;
     text-align: center;
   }
-
   nav.desk ul li {
     width: 20%;
     float: left;
@@ -227,22 +215,18 @@ a {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+            transform-style: preserve-3d;
     border-radius: 40px;
   }
-
   nav ul li:hover {
     background-color: #996868;
   }
-
   form {
     margin-top: 50px;
   }
-
   form .submit {
     text-align: center;
   }
-
   .form-control {
     width: 600px;
     background: transparent;
@@ -253,11 +237,9 @@ a {
     font-size: 18px;
     margin-bottom: 16px;
   }
-
   input {
     height: 45px;
   }
-
   form .submit {
     background-color: black;
     border-radius: 40px;
@@ -271,13 +253,11 @@ a {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+            transform-style: preserve-3d;
   }
-
   form .submit:hover {
     background-color: #996868;
     color: white;
   }
 }
-
 /*# sourceMappingURL=style.css.map */
