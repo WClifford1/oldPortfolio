@@ -62,6 +62,7 @@ html {
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 
@@ -70,12 +71,14 @@ ul {
   background-color: #393d3e;
   color: white;
   padding: 10px 80px;
+  text-align: center;
   letter-spacing: 2px;
   font-weight: 100;
 
   h2 {
     letter-spacing: 10px;
     font-weight: 100;
+    text-align: center;
   }
 }
 
