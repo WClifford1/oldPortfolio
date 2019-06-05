@@ -66,6 +66,7 @@ ul {
 }
 
 
+
 // This is the content between the background images
 .section {
   background-color: #393d3e;
@@ -142,6 +143,10 @@ button:hover {
   color: rgb(153, 104, 104);
 }
 
+#tekmore:hover {
+  color: rgb(153, 104, 104);
+  text-decoration: underline;
+}
 
 // This is the container for both of the nav bars
 .container nav.desk,

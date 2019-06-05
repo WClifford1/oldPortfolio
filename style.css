@@ -144,6 +144,11 @@ button:hover {
   color: #996868;
 }
 
+#tekmore:hover {
+  color: #996868;
+  text-decoration: underline;
+}
+
 .container nav.desk,
 .container nav.mob {
   position: fixed;
