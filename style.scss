@@ -157,6 +157,11 @@ a {
 // This is specific settings for mobile devices which changes the nav bar and disables the parallax
 @media screen and (max-width: 700px) {
 
+  // Disable the copy to clipboard buttons on mobile
+  button {
+    display: none;
+  }
+
 
   // Disables the desktop nav bar
   nav.desk {

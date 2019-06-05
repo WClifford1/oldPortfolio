@@ -150,6 +150,9 @@ a {
 }
 
 @media screen and (max-width: 700px) {
+  button {
+    display: none;
+  }
   nav.desk {
     display: none;
   }
