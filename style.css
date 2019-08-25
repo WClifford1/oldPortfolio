@@ -19,17 +19,17 @@ html {
 
 .pimg2 {
   background-image: url(./img/IMG_2.jpeg);
-  min-height: 500px;
+  min-height: 60%;
 }
 
 .pimg3 {
   background-image: url(./img/IMG_3.jpeg);
-  min-height: 500px;
+  min-height: 60%;
 }
 
 .pimg4 {
   background-image: url(./img/IMG_4.jpeg);
-  min-height: 500px;
+  min-height: 75%;
 }
 
 .pimg1,
@@ -62,7 +62,7 @@ ul {
 }
 
 .section {
-  background-color: #393d3e;
+  background: #35343f;
   color: white;
   padding: 10px 80px;
   text-align: center;
@@ -87,7 +87,7 @@ h2::before {
 
 @-webkit-keyframes in {
   0% {
-    opacity: 0.6;
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -96,7 +96,7 @@ h2::before {
 
 @keyframes in {
   0% {
-    opacity: 0.6;
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -106,12 +106,17 @@ h2::before {
 .coffee {
   display: inline-block;
   padding-bottom: .5rem;
-  height: 25vh;
+  height: 30vh;
   width: 25vw;
-  margin: auto 20px;
-  opacity: 0.6;
-  -webkit-transform: all 1s ease-in-out;
-          transform: all 1s ease-in-out;
+  margin: auto 30px;
+  opacity: 0.8;
+  -webkit-transform: all 0.1s ease-in-out;
+          transform: all 0.1s ease-in-out;
+}
+
+.desc {
+  margin: auto;
+  width: 80%;
 }
 
 .coffee:hover {
@@ -144,8 +149,8 @@ button:hover {
   color: #996868;
 }
 
-#tekmore:hover {
-  text-decoration: underline;
+.tekmore:hover {
+  text-decoration: none;
   display: absolute;
   width: 50%;
   padding: 18px;
@@ -155,6 +160,17 @@ button:hover {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   border-radius: 40px;
+  background-color: #996868;
+}
+
+.stack:hover {
+  display: absolute;
+  font-size: 1.1vw;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 5px;
   background-color: #996868;
 }
 
