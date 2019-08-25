@@ -105,11 +105,11 @@ h2::before {
 
 .coffee {
   display: inline-block;
-  padding-bottom: .5rem;
   height: 30vh;
   width: 25vw;
   margin: auto 30px;
   opacity: 0.8;
+  border-radius: 10px;
   -webkit-transform: all 0.1s ease-in-out;
           transform: all 0.1s ease-in-out;
 }
@@ -160,17 +160,6 @@ button:hover {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   border-radius: 40px;
-  background-color: #996868;
-}
-
-.stack:hover {
-  display: absolute;
-  font-size: 1.1vw;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  border-radius: 5px;
   background-color: #996868;
 }
 

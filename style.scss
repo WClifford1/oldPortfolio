@@ -104,13 +104,14 @@ h2::before {
 // This is for the images of CoffeeApp in the portfolio section
 .coffee {
   display: inline-block;
-  padding-bottom: .5rem;
   height: 30vh;
   width: 25vw;
   margin: auto 30px;
   opacity: 0.8;
+  border-radius: 10px;
   transform: all 0.1s ease-in-out;
 }
+
 
 .desc {
   margin: auto;
